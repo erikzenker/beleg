@@ -1,0 +1,98 @@
+%%% LATEX PRÄAMBEL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,a4paper]{article}
+%\documentclass[11pt,a4paper,headsepline,notitlepage,cleardoubleempty,BCOR=20mm,twoside,DIV=12]{scrreprt}  
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{latexsym}
+\usepackage{hyperref}
+%\renewcommand{\baselinestretch}{1.50}\normalsize
+\bibliographystyle{plain}
+\bibdata{mybib}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{function}{Funktion}[section]
+
+
+%%% TITEL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \title{\small{Großer Beleg}\\\Large{Analyse von Ansätzen zur Beschleunigung von SAT-Lösern durch dedizierte Hardware-Komponenten}}
+ \author{Erik Zenker}
+ \date{22.07.2011}
+
+
+%%% MAKROS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\newcommand{\ru}[1]{\textcolor{black}{$\leadsto$ #1}}
+\newcommand{\dec}[1]{\textcolor{black}{ #1^d}}
+%\date{\dasdatum}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% DOKUMENT ANFANG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%\maketitle
+\begin{titlepage}
+        \vspace*{\bigskipamount}
+        \begin{center}
+                \noindent
+                \textbf{\LARGE{Großer Beleg}}\\[4ex]
+                \noindent%
+                \textbf{\huge{Analyse von Ansätzen zur Beschleunigung von SAT-Lösern durch dedizierte Hardware-Komponenten}}\\[10ex]
+                \Large Erik Zenker\\[0.5ex]
+	        \Large 14.08.2011\\[4ex]
+                \LARGE Technische Universität Dresden\\
+                \Large Fakultät Informatik\\
+                \mbox{}\\
+                Institut für Technische Informatik\\
+                Professur für VLSI-Entwurfssysteme, Diagnostik und Architektur\\
+                                 \mbox{}\\
+                        Institut für Künstliche Intelligenz\\
+                        Professur  für Knowledge Representation and Reasoning
+        \end{center}
+\begin{flushleft}
+\vfill
+Betreut von:
+
+\textbf{Prof.\,Dr.-Ing.\,habil. Rainer G. Spallek}\\
+\textbf{Prof.\,Dr.\,rer.\,nat. Steffen H\"olldobler (KI)}\\
+\textbf{Dipl.-Inf. Thomas Preußer}\\
+\textbf{Dipl.-Inf. Norbert Manthey (KI)}
+
+
+\end{flushleft}
+\end{titlepage}
+\newpage
+\mbox{} \thispagestyle{empty}
+\newpage
+Hier Aufgabenstellung einfügen
+\newpage
+
+\mbox{} \thispagestyle{empty}
+\newpage
+\tableofcontents 
+\newpage
+%%% EINLEITUNG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{einleitung}
+
+%%% EINFÜHRUNG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{einfuehrung}
+
+%%% FPGA SAT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{fpga_sat}
+
+%%% SYSTEMÜBERBLICK %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{system}
+
+%%% RESULTATE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{results}
+
+%%% Zukünftige Arbeit %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{future}
+
+
+\bibliography{mybib}
+
+\end{document}
+%%% DOKUMENT ENDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

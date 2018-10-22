@@ -1,0 +1,62 @@
+\section{FPGA-SAT}
+Es hat sich gezeigt, dass sich mithilfe von FPGAs und angepassten 
+Algorithmen Probleme wesentlich effizienter lösen lassen
+als mit Universal-Prozessoren \cite{preusser:2009}\cite{dietrich:2009}. 
+So kann auch das SAT-Problem und dessen\\Lösungsalgorithmen 
+auf die Verarbeitung in FPGAs angepasst werden.
+In diesem Kapitel wird auf die bisherige Arbeit im Bereich
+Hardware-SAT-Solver eingegangen und zwei Entwürfe, welche
+am vielsversprechendsten sind, kurz erläutert. 
+Eine Zusammenfassung der genutzten 
+Techniken bis 2004 wird gegeben von
+Skliarova \cite{ferrari:2004} und
+bietet einen Überblick zum Thema FPGA-SAT.
+
+\subsection{Kategorisierung von Hardware-SAT-Solvern}
+Skilarova \cite{ferrari:2004} unterschiedet, auf welche Art
+und Weise man SAT-Probleme mithilfe von Hardware löst. 
+Diese Kategorisierung von Hardware-SAT-Solvern wird auch in dieser Arbeit
+aufgegriffen. Unterschieden werden typische SAT-Algorithmen wie DPLL, CDCL bzw. SLS, 
+aber auch verwendete Entscheidungsheuristiken bzw. andere Techniken moderner
+Software-SAT-Solver.\\
+Desweiteren unterscheidet man das genutzte Programiermodell.
+Für jede SAT-Instanz kann ein neuer Schaltkreis 
+generiert werden, dann spricht man vom instanzspezifischen Programmiermodell 
+oder man entwirft einen Schaltkreis, welcher 
+synthetisiert verschiedene Instanzen 
+lösen kann, dann spricht man vom aplikationsspezifischen Modell.\\
+Das dritte Unterscheidungsmerkmal ist das Ausführungsmodell. 
+Man kann den kompletten SAT-Solver in Hardware auf einem FPGA 
+realisieren,dann ist es eine reine Hardware Lösung, oder man lagert
+Teilkomponenten in Hardware aus, 
+dann wird von einer Hardware / Software-Hybrid-Lösung gesprochen.\\
+
+\subsection{Vorhandene Hardware-SAT-Solver}
+Erste reine Hardware-Lösungen im Zeitraum von 1996 bis 2004
+waren meist instanzspezifische Solver und für Probleme bis 
+100 Variablen ausgelegt. Instanzspezifische Entwürfe benötigen 
+bei neuen Instanzen Zeit um eine Synthese durchzuführen, wobei 
+das eigentliche Lösen des Problems dann sehr schnell geschieht.
+Diese Hardware-SAT-Solver wurden entworfen bevor
+moderne SAT-Solver \cite{manthey:2010} ihren Siegeszug in der
+Software-Welt antraten, sodass es eine Zeit lang keine weiteren Veröffentlichungen 
+gegeben hat und ein Performancevergleich nicht möglich war.\\
+Ab 2008 findet man erste Arbeiten, welche bei der Problemkomplexität 
+mit modernen Software-Solver mithalten können. 
+Eine Arbeit von John D. Davis et al. \cite{davis:2008} 
+beschreibt einen applikationspeziafischen Hybrid-Entwurf auf CDCL-Basis.
+Ein Host-PC übernimmt die Berechnung von Entscheidungsvariablen und die Analyse 
+von Konflikten. Auf den FPGA wurde die Inferenz-Komponente ausgelagert. 
+Davis Solver kann Probleme mit bis zu 64\,k Variablen und 64\,k Klauseln lösen.\\
+Eine weitere Arbeit von Leopold Haller et al. \cite{haller:2010} 
+beschreibt auch einen applikationsspezifischen Entwurf, jedoch wurde 
+kein Host-PC für verschiedene Berechnungen benutzt. Dieser   
+Entwurf ist in reiner Hardware realisiert. Durch die Nutzung von großen 
+DRAM-Speichern können Probleme von bis zu 1\,M Variablen und 70\,M 
+Klauseln berechnet werden. Leider fehlen in dieser Arbeit Resultate.\\
+Nach ausführlichem Literaturstudium stellt man fest,
+dass es zwar FPGA-SAT-Implementierungen gibt und diese
+zu einer Beschleunigung der Algorithmen führen, jedoch fehlt
+der Vergleich zu modernen Software-SAT-Solvern.\\
+%\todo{man könnte hier noch ausführlicher schreiben, zumindest bis
+%die Seite voll ist}

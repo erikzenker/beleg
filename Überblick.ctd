@@ -1,0 +1,19 @@
+<?xml version="1.0" ?><cherrytree><node name="Sat Einleitung" prog_lang="custom-colors" tags="" unique_id="2"><rich_text></rich_text><node name="Aussagenlogik" prog_lang="custom-colors" tags="" unique_id="3"><rich_text>• Variablen sind Zahlen zwischen 1 und n
+• Die Domäne der Variablen ist &quot;wahr&quot; oder &quot;falsch&quot;
+• Die Operationen sind &quot;Negation&quot;, &quot;Konjunktion&quot; und &quot;Disjunktion&quot;
+• Literale sind Variablen oder negierte Variablen
+• Klausel ist Disjunktion von Literalen
+• Formel ist Konjunktion von Klauseln</rich_text></node><node name="Satisfiability Testing" prog_lang="custom-colors" tags="" unique_id="4"><rich_text>* Für eine gegebene Formel soll ermittelt werden ob es ein Model für diese gibt
+* Gibt es kein Model wird unlösbar zurück gegeben</rich_text><node name="DPLL" prog_lang="custom-colors" tags="" unique_id="5"><rich_text>* Davis Putman Logemann Loveland procedure
+* Algorithmus erklären
+</rich_text></node><node name="CDCL" prog_lang="custom-colors" tags="" unique_id="6"><rich_text>* Conflict driven clause learning
+* Algorithmus erklären</rich_text></node></node><node name="Solver Analyse" prog_lang="custom-colors" tags="" unique_id="7"><rich_text>* Was macht moderner Sat Solver die ganze Zeit</rich_text></node></node><node name="FPGA Einleitung" prog_lang="custom-colors" tags="" unique_id="8"><rich_text>* Funktionsblöcke angeordnet als Matrix
+* programmierbare Verbindungen</rich_text><node name="Multiplexer basiert" prog_lang="custom-colors" tags="" unique_id="9"><rich_text>* ist die Frage ob man darüber was sagen sollte</rich_text></node><node name="LUT basiert" prog_lang="custom-colors" tags="" unique_id="10"><rich_text>• Look-up Table -&gt; Sram technologie basierend
+• K-Lut
+   * realisiert beliebige Funktion mit K eingängen
+   * 2^k Tabellenplätze 
+</rich_text></node></node><node name="FPGA SAT" prog_lang="custom-colors" tags="" unique_id="13"><rich_text></rich_text><node name="Hardware Solver criterias" prog_lang="custom-colors" tags="" unique_id="14"><rich_text></rich_text><node name="Algorithmic Issues" prog_lang="custom-colors" tags="" unique_id="17"><rich_text>• dpll
+• cdcl</rich_text></node><node name="Programming Model" prog_lang="custom-colors" tags="" unique_id="18"><rich_text>• instance specific
+• application specific</rich_text></node><node name="Execution Model" prog_lang="custom-colors" tags="" unique_id="19"><rich_text>• hardware
+• software
+• hybrid (hardware / software)</rich_text></node></node><node name="Early Hardware SAT Solver" prog_lang="custom-colors" tags="" unique_id="15"><rich_text></rich_text></node><node name="Modern Hardware SAT Solver" prog_lang="custom-colors" tags="" unique_id="16"><rich_text></rich_text></node></node></cherrytree>
